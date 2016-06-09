@@ -28,7 +28,8 @@ plt.xlabel('Epochs')
 plt.ylabel('Number of misclassifications')
 
 plt.show()
-savefig('foo2.png')
+plt.savefig('myfig1')
+
 
 from matplotlib.colors import ListedColormap
 
@@ -42,7 +43,7 @@ cmap = ListedColormap(colors[:len(np.unique(y))])
 # plot the decision surface
 
 x1_min, x1_max = X[:,0].min() - 1, X[:,0].max() + 1
-x2_minm x2_max = X[:,1].min() -1 , X[:,1].max() +1
+x2_min, x2_max = X[:,1].min() -1 , X[:,1].max() +1
 xx1, xx2 = np.meshgrid(np.arange(x1_min, x1_max, resolution), np.arrange(x2_min, x2_max, resolution))
 
 Z = classifier.predict(np.array([xx1.ravel(),xx2.ravel()]).T) #hmm.. who is ravel ?
@@ -61,6 +62,6 @@ plt.ylabel('petal length [cm]')
 plt.legend(loc='upper left')
 
 plt.show()
-savefig('foo2.png')
+plt.savefig('myfig2')
 
 
